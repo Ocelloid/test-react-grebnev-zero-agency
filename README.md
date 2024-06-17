@@ -24,8 +24,7 @@ API: https://jsonplaceholder.typicode.com/
 - [x] Страница списка постов (данные из jsonplaceholder)
 - [x] Cтраница отдельного поста
 - [x] Модули с SCSS
-- [ ] Темы с SCSS
-- [ ] Next SEO
+- [x] Next SEO
 - [ ] Пагинация
 - [ ] Авторизация
 - [ ] Стейт через nanostores
