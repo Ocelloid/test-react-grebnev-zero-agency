@@ -48,7 +48,11 @@ export default function Header() {
             onChange={(e) => setPassword(e.target.value)}
           />
           <button
-            onClick={() => queries.signIn(login, password)}
+            onClick={() => {
+              queries.signIn(login, password);
+              setLogin("");
+              setPassword("");
+            }}
             disabled={!login || !password}
             className={styles.login}
           >
