@@ -1,0 +1,21 @@
+@import "@/app/_styles/mixins";
+@import "@/app/_styles/colors";
+
+.post {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  &:nth-child(even) {
+    @include flex-row($even);
+  }
+  &:nth-child(odd) {
+    @include flex-row($odd);
+  }
+  div {
+    @include flex-column;
+  }
+  h4 {
+    margin-bottom: 0.5rem;
+  }
+}
