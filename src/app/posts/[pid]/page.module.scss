@@ -1,0 +1,9 @@
+@import "@/app/_styles/mixins";
+
+.post {
+  @include flex-column;
+  > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}

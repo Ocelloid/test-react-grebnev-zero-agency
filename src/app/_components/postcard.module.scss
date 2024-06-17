@@ -2,20 +2,23 @@
 @import "@/app/_styles/colors";
 
 .post {
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-  &:nth-child(even) {
-    @include flex-row($even);
-  }
-  &:nth-child(odd) {
-    @include flex-row($odd);
-  }
-  div {
+  @include card;
+  > div {
     @include flex-column;
-  }
-  h4 {
-    margin-bottom: 0.5rem;
+    > h4 {
+      width: 100%;
+      display: flex;
+      margin-bottom: 0.5rem;
+      justify-content: space-between;
+      a {
+        transition: color 0.5s ease-in-out;
+        min-width: 24px;
+        color: $primary;
+        &:hover {
+          text-decoration: none;
+          color: lighten($primary, 20%);
+        }
+      }
+    }
   }
 }

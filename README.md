@@ -22,9 +22,10 @@ API: https://jsonplaceholder.typicode.com/
 - [x] Приложение на Next + TS + AppRouter
 - [x] Цвета и миксины с SCSS
 - [x] Страница списка постов (данные из jsonplaceholder)
-- [ ] Cтраница отдельного поста
-- [ ] Модули с SCSS
+- [x] Cтраница отдельного поста
+- [x] Модули с SCSS
 - [ ] Темы с SCSS
+- [ ] Next SEO
 - [ ] Пагинация
 - [ ] Авторизация
 - [ ] Стейт через nanostores

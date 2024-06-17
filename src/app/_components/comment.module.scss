@@ -1,0 +1,15 @@
+@import "@/app/_styles/mixins";
+@import "@/app/_styles/colors";
+
+.comment {
+  @include card;
+  > div {
+    @include flex-column;
+    h5 {
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: small;
+    }
+  }
+}
