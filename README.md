@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Постановка задачи
 
-## Getting Started
+Простейшее приложение на базе next.js с использованием AppRouter и TypeScript
 
-First, run the development server:
+Список постов, при отркытии поста - показываем ещё список комментариев.
+По userId подтягиваем логин пользователя.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+API: https://jsonplaceholder.typicode.com/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Требования
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Внешний вид - любой бесплатный шаблон, хоть бутстрап. Важно показать работу со SCSS в формате CSS Modules.
+2. Каждый пост на отдельном URL.
+3. Посты должны подтягиваться так, чтобы поисковые роботы видели уже отредеренные страницы(т.е. через SSR и с использованием next seo).
+4. Изобразить фейковую пагинацию(в jsonplaceholder нет пагинации, но можно прикинуться, что через page=2 оно отдает что-то другое).
+5. Делаем фейковое API для авторизации по логину-паролю. Управление состоянием через [https://github.com/storeon/storeon](https://github.com/nanostores/nanostores).
+6. Не должно быть лишних рендеров и лишних запросов к API.
+7. Срок выполнения - не больше трёх дней. Мы высылаем тестовые задания пачками сразу десяткам людей, поэтому вас просто могут опередить другие кандидаты.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## План действий
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [x] Приложение на Next + TS + AppRouter
+- [ ] Страница списка постов (данные из jsonplaceholder)
+- [ ] Cтраница отдельного поста
+- [ ] Модули с SCSS
+- [ ] Пагинация
+- [ ] Авторизация
+- [ ] Стейт через nanostores
