@@ -1,0 +1,28 @@
+@import "@/app/_styles/mixins";
+@import "@/app/_styles/colors";
+
+.pagination {
+  @include flex-row(rgba(255, 255, 255, 0));
+  .numbers {
+    @include flex-row(rgba(255, 255, 255, 0));
+    justify-content: center;
+    > div,
+    a {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .active {
+    color: $tertiary;
+  }
+  .link {
+    color: lighten($primary, 20%);
+    transition: color 0.5s ease-in-out;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .disabled {
+    color: darken($primary, 30%);
+  }
+}

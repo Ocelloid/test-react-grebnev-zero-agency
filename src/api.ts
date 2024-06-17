@@ -1,10 +1,19 @@
 export const queries = {
-  getPosts: async () => {
+  getTotalPosts: async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     if (!res.ok) {
       throw new Error("Это не те посты, которые вы ищете.");
     }
-    return res.json();
+    const posts = await res.json();
+    return posts.length;
+  },
+  getPosts: async (page: number, take: number) => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+    if (!res.ok) {
+      throw new Error("Это не те посты, которые вы ищете.");
+    }
+    const posts = await res.json();
+    return posts.slice((page - 1) * take, page * take);
   },
   getPostById: async (postId: string) => {
     const res = await fetch(
