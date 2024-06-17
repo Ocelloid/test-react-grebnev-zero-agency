@@ -21,19 +21,19 @@ API: https://jsonplaceholder.typicode.com/
 
 2. Каждый пост на отдельном URL.
 
-- см. /api.ts, /app/posts/[pid]/page.tsx
+- см. types.ts, getPosts, getPostById, getComments в /api.ts, /app/posts/[pid]/page.tsx
 
 3. Посты должны подтягиваться так, чтобы поисковые роботы видели уже отредеренные страницы(т.е. через SSR и с использованием next seo).
 
-- см. /app/robots.ts и /app/sitemap.ts
+- см. url.ts, /app/robots.ts и /app/sitemap.ts
 
 4. Изобразить фейковую пагинацию(в jsonplaceholder нет пагинации, но можно прикинуться, что через page=2 оно отдает что-то другое).
 
-- см. /api.ts, /app/\_components/Pagination.tsx
+- см. getTotalPosts в /api.ts, /app/\_components/Pagination.tsx
 
 5. Делаем фейковое API для авторизации по логину-паролю. Управление состоянием через [https://github.com/storeon/storeon](https://github.com/nanostores/nanostores).
 
--
+- см signIn, signOut в /api.ts, /store/users.ts, /app/\_components/Header.tsx
 
 6. Не должно быть лишних рендеров и лишних запросов к API.
 7. Срок выполнения - не больше трёх дней. Мы высылаем тестовые задания пачками сразу десяткам людей, поэтому вас просто могут опередить другие кандидаты.

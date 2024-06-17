@@ -1,4 +1,12 @@
+import { getUser, setUser } from "./store/users";
+
 export const queries = {
+  signIn: (login: string, password: string) => {
+    setUser({ login, password });
+  },
+  signOut: () => {
+    setUser({ login: "", password: "" });
+  },
   getTotalPosts: async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/posts");
     if (!res.ok) {

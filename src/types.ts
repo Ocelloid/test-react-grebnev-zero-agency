@@ -13,3 +13,8 @@ export type Comment = {
   email: string;
   body: string;
 };
+
+export type User = {
+  login: string;
+  password: string;
+};
