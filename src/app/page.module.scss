@@ -4,8 +4,32 @@
 .main {
   @include flex-column;
   align-items: flex-start;
-  padding: 3rem 6rem;
+  padding: 3rem;
   min-height: 100vh;
   background-color: $background;
   color: $foreground;
+}
+
+@media (min-width: 576px) {
+  .main {
+    padding: 3rem 6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    padding: 3rem 12rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    padding: 3rem 18rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main {
+    padding: 3rem 24rem;
+  }
 }
