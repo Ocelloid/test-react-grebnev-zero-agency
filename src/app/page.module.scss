@@ -1,0 +1,10 @@
+@import "@/app/_styles/colors";
+@import "@/app/_styles/mixins";
+
+.main {
+  @include flex-column;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: $background;
+}

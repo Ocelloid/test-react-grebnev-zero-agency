@@ -1,0 +1,11 @@
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin flex-row($bg) {
+  display: flex;
+  flex-direction: row;
+  background: $color;
+}
