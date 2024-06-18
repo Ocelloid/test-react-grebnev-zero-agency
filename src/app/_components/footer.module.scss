@@ -1,0 +1,17 @@
+@import "@/app/_styles/colors";
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  height: 1.5rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.25rem 3rem;
+  background-color: darken($background, 15%);
+  a {
+    margin-left: auto;
+    font-size: x-small;
+  }
+}

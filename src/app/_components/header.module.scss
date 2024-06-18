@@ -10,6 +10,7 @@
   position: fixed;
   padding: 1rem;
   > div {
+    margin-left: auto;
     font-size: small;
     align-items: center;
     display: flex;
@@ -30,7 +31,9 @@
       }
     }
     input {
-      width: 8rem;
+      width: 100%;
+      min-width: 6rem;
+      max-width: 12rem;
       padding: 0.5rem;
       border-radius: 0.5rem;
     }
